@@ -1,0 +1,41 @@
+{
+    "name": "unity-ecs-snippets",
+    "displayName": "Unity ECS Snippets",
+    "description": "Snippets for Unity DOTS 1.0.11",
+    "version": "1.0.0",
+    "publisher": "Ashton Dev",
+    "homepage": "https://github.com/ashtonland/unity-ecs-snippets/blob/main/README.md",
+    "keywords":
+    [
+        "unity dots", "unity ecs", "unity 3d", "c#", "dots", "ecs", "unity", "unity3d", "unity 3d",
+        "c#", "c sharp", "csharp", "c-sharp", "cs", "gamedev", "code", "script", "unity code",
+        "unity script", "unity engine", "unity entities"
+    ],
+    "author":
+    {
+        "name": "Ashton Dev",
+        "url": "https://www.youtube.com/@ashtondev"
+    },
+    "bugs": {
+		"url": "https://github.com/ashtonland/unity-ecs-snippets/issues"
+	},
+    "repository": {
+		"type": "git",
+		"url": "https://github.com/ashtonland/unity-ecs-snippets"
+	},
+    "engines": {
+        "vscode": "^1.39.0"
+    },
+    "icon": "icon.png",
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "csharp",
+                "path": "./snippets.json"
+            }
+        ]
+    }
+}
