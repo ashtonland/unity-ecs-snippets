@@ -269,5 +269,37 @@
 			"}"
 		],
 		"description": "Create a Unity DOTS component baker & its authoring monobehavior class"
+	},
+	"Dots Create Baker w/ Dependency": {
+		"prefix": "dcbd",
+		"body": [
+			"using UnityEngine;",
+			"using Unity.Entities;",
+			"",
+			"namespace ${1}",
+			"{",
+			"\tpublic class ${2:$TM_FILENAME_BASE} : MonoBehaviour",
+			"\t{",
+			"\t\tpublic ${3:GameObject} ${4:dataSource};",
+			"\t}",
+			"",
+			"\tpublic class ${5:Component}Baker : Baker<${2:$TM_FILENAME_BASE}>",
+			"\t{",
+			"\t\tpublic override void Bake(${2:$TM_FILENAME_BASE} authoring)",
+			"\t\t{",
+			"\t\t\tDependsOn(authoring.${4:dataSource});",
+			"\t\t\t",
+			"\t\t\tif (authoring.${4:dataSource} == null) return;",
+			"\t\t\t",
+			"\t\t\tvar entity = GetEntity(TransformUsageFlags.Dynamic);",
+			"\t\t\tAddComponent(entity, new ${5:Component}",
+			"\t\t\t{",
+			"\t\t\t\t${6:ComponentVariable} = authoring.${4:dataSource}.${0}",
+			"\t\t\t});",
+			"\t\t}",
+			"\t}",
+			"}"
+		],
+		"description": "Create a Unity DOTS component baker referencing another data source (i.e. mesh, gameObject, scriptable obj...)"
 	}
 }
