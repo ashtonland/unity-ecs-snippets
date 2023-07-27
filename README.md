@@ -32,6 +32,8 @@ Coding in Unity DOTS indroduces new boilerplate that needs to be remembered. Fro
 | dcsc |     Create a Unity DOTS unmanaged shared component (for components used on many entities & with the same values)      |
 | dcmsc |     Create a Unity DOTS managed shared component (for shared components using non-blittable types)      |
 | dcj |     Create a Unity DOTS Job (no `using Unity.Entities` added with this command, for it is likely added to a System file & not standalone)      |
+| dcb       |      Create a Unity DOTS component baker & its authoring monobehavior class       |
+| dcbd       |      Create a Unity DOTS component baker referencing another data source (i.e. mesh, gameObject, scriptable obj...)       |
 
 ### Naming Convention
 The commands above all begin with dc standing for "Dots Create ..." which means you can always just type dc and use the dropdown to find or read more about any command. For example, `dcsc` stands for Dots Create Shared Component.
