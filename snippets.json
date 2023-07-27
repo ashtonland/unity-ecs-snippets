@@ -241,5 +241,33 @@
 			"}"
 		],
 		"description": "Create a Unity DOTS Job"
+	},
+	"Dots Create Baker": {
+		"prefix": "dcb",
+		"body": [
+			"using UnityEngine;",
+			"using Unity.Entities;",
+			"",
+			"namespace ${1}",
+			"{",
+			"\tpublic class ${2:$TM_FILENAME_BASE} : MonoBehaviour",
+			"\t{",
+			"\t\tpublic ${3:float} ${4:variable};${0}",
+			"\t}",
+			"",
+			"\tpublic class ${5:Component}Baker : Baker<${2:$TM_FILENAME_BASE}>",
+			"\t{",
+			"\t\tpublic override void Bake(${2:$TM_FILENAME_BASE} authoring)",
+			"\t\t{",
+			"\t\t\tvar entity = GetEntity(TransformUsageFlags.Dynamic);",
+			"\t\t\tAddComponent(entity, new ${5:Component}",
+			"\t\t\t{",
+			"\t\t\t\t${6:ComponentVariable} = authoring.${4:variable}",
+			"\t\t\t});",
+			"\t\t}",
+			"\t}",
+			"}"
+		],
+		"description": "Create a Unity DOTS component baker & its authoring monobehavior class"
 	}
 }
