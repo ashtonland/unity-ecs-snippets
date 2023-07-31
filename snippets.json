@@ -301,5 +301,20 @@
 			"}"
 		],
 		"description": "Create a Unity DOTS component baker referencing another data source (i.e. mesh, gameObject, scriptable obj...)"
+	},
+	"Dots Create Aspect": {
+		"prefix": "dca",
+		"body": [
+			"using Unity.Entities;",
+			"",
+			"namespace ${1}",
+			"{",
+			"\treadonly partial struct ${2:$TM_FILENAME_BASE} : IAspect",
+			"\t{",
+			"\t\treadonly ${3|RefRW,RefRO|}<${4:Component}> ${4:ComponentName};${0}",
+			"\t}",
+			"}"
+		],
+		"description": "Create a Unity DOTS aspect (used to group related components)"
 	}
 }
