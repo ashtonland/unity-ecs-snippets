@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.3.0]
+
+Introduces Raycast snippet
+- dcrc | Dots Create Raycast
+
+Fixes
+- Removes extra bracket in ISystem w/ onStart onStop snippet (dcsss)
+
 ## [1.2.0]
 
 Introduces Aspect snippet
