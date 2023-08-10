@@ -60,7 +60,7 @@
 			"\t\t{",
 			"\t\t\t",
 			"\t\t}",
-			"\t}",
+			"",
 			"\t\tpublic void OnStartRunning(ref SystemState state)",
 			"\t\t{",
 			"\t\t\t",
@@ -316,5 +316,32 @@
 			"}"
 		],
 		"description": "Create a Unity DOTS aspect (used to group related components)"
+	},
+	"Dots Create Raycast": {
+		"prefix": "dcrc",
+		"body": [
+			"var collisionWorld = SystemAPI.GetSingleton<PhysicsWorldSingleton>().CollisionWorld;",
+			"",
+			"RaycastInput input = new RaycastInput()",
+			"{",
+			"\tStart = ${1},",
+			"\tEnd = ${2},",
+			"\tFilter = new CollisionFilter()",
+			"\t{",
+			"\t\tBelongsTo = ${3:~0u},",
+			"\t\tCollidesWith = ${4:~0u}, //preset is collides w/ everything",
+			"\t\tGroupIndex = ${5:0}",
+			"\t}",
+			"};",
+			"",
+			"RaycastHit hit = new RaycastHit();",
+			"bool didHit = collisionWorld.CastRay(input, out hit);",
+			"",
+			"if (didHit)",
+			"{",
+			"\t${0}",
+			"}"
+		],
+		"description": "Create a Unity Physics (the DOTS package) raycast. NOTE: requires Unity Physics package to be installed and a using directive - using Unity.Physics;"
 	}
 }
