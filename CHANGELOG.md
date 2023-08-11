@@ -1,5 +1,10 @@
 # Change Log
 
+## [1.3.1]
+
+Fixes
+- Adds raycast snippet documentation, which was previously lacking
+
 ## [1.3.0]
 
 Introduces Raycast snippet
