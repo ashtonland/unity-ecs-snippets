@@ -35,6 +35,7 @@ Coding in Unity DOTS indroduces new boilerplate that needs to be remembered. Fro
 | dcb       |      Create a Unity DOTS component baker & its authoring monobehavior class       |
 | dcbd       |      Create a Unity DOTS component baker referencing another data source (i.e. mesh, gameObject, scriptable obj...)       |
 | dca       |      Create a Unity DOTS aspect (used to group related components)       |
+| dcrc       |      Create a Unity Physics (the DOTS package) raycast.      |
 
 ### Naming Convention
 The commands above all begin with dc standing for "Dots Create ..." which means you can always just type dc and use the dropdown to find or read more about any command. For example, `dcsc` stands for Dots Create Shared Component.
