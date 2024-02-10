@@ -41,7 +41,7 @@ Coding in Unity DOTS indroduces new boilerplate that needs to be remembered. Fro
 The commands above all begin with dc standing for "Dots Create ..." which means you can always just type dc and use the dropdown to find or read more about any command. For example, `dcsc` stands for Dots Create Shared Component.
 
 ## Supported Version of Unity DOTS
-- Unity DOTS 1.0.11 (The current production release as of July 2023)
+- Unity DOTS 1.0.11 and higher
 
 ## Contributing
 Feel free to open a pr on the github repository any time to create new snippets that you want to see! Also if you are not familiar with creating snippets, open up an issue requesting a new snippet 🤝
